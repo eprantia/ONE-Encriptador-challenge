@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="img/logo.png" alt="logo">
+        </div>
+        
+    </header>
+    <main>
+        <ul id="input">
+            <li>
+                <input type="text" id="txtInput">
+            </li>
+            <li>
+                <div class="centrado" id="btnEncDesc">
+                    <button type="button" id="btnEncriptar" onclick="encriptar();">Encriptar</button>
+                    <button type="button" id="btnDesencriptar" onclick="desencriptar();">Desencriptar</button>
+                 </div>
+            </li>
+        </ul>
+        <ul id="output">
+            <li class="centrado"><textarea name="resultado" id="txtOutput" cols="30" rows="10"></textarea></li>
+            <li class="centrado"><p>Texto</p></li>
+            <li class="centrado"><button type="button" id="btnCopiar" onclick="copyTxt();">Copiar</button></li>
+            
+        </ul>
+    </main>
+    <footer>
+        Marco Vlz
+    </footer>
+    <script src="app.js" defer></script>
+</body>
+</html>
