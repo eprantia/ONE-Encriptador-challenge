@@ -9,29 +9,37 @@
 </head>
 <body>
     <header>
-        <div id="logo">
-            <img src="img/logo.png" alt="logo">
-        </div>
-        
+        <img src="img/logo.png" alt="logo">
     </header>
     <main>
-        <ul id="input">
-            <li>
-                <input type="text" id="txtInput">
-            </li>
-            <li>
-                <div class="centrado" id="btnEncDesc">
-                    <button type="button" id="btnEncriptar" onclick="encriptar();">Encriptar</button>
-                    <button type="button" id="btnDesencriptar" onclick="desencriptar();">Desencriptar</button>
-                 </div>
-            </li>
-        </ul>
-        <ul id="output">
-            <li class="centrado"><textarea name="resultado" id="txtOutput" cols="30" rows="10"></textarea></li>
-            <li class="centrado"><p>Texto</p></li>
-            <li class="centrado"><button type="button" id="btnCopiar" onclick="copyTxt();">Copiar</button></li>
-            
-        </ul>
+        <section class="inputSection">
+            <div class="divInputTxt">
+                <textarea class="inputTxt" placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+            <div class="warning">
+                <img src="/img/logo.png" alt="warning">
+                <p>Solo letras minusculas y sin acentos</p>
+            </div>
+            <div class="divBtns">
+                <input type="button" value="Encriptar" class="btnEncriptar">
+                <input type="button" value="Desencriptar" class="btnDesencriptar">
+            </div>
+        </section>
+        <section class="outputSeccion">
+            <div class="divImg">
+                <img src="img/Muñeco.png" alt="muneco">
+            </div>
+            <div class="divOutputMsn">
+                <h3>Ningun mensaje fue <br> encontrado</h3>
+                <p>Ingresa el texto que desear encriptar o desencriptar</p>
+            </div>
+            <div class="divOutputTxt">
+                <p class="outputTxt"></p>
+            </div>
+            <div class="divBtnCopy">
+                <input type="button" value="Copiar" class="btnCopy">
+            </div>
+        </section>
     </main>
     <footer>
         Marco Vlz
