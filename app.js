@@ -1,13 +1,17 @@
-    // Elimina los diacríticos de un texto (ES6)
-function eliminarDiacriticos(texto) {
-    return texto.normalize('NFD').replace(/[\u0300-\u036f]/g,"");
-}
+var msn = document.getElementsByClassName('divOutputMsn');
+var outputTxt = document.getElementsByClassName('divOutputTxt');
+var btnCopy = document.getElementsByClassName('divBtnCopy');
+
+var txtOutput = '';
+var txtLimpio = '';
+
+var txtInput = '';
+
 
 function encriptar(){
-    let txtOutput = '';
-    let txtInput = cleanTxt();
-
-    txtOutput = txtInput.replace(/e/g, 'enter');
+    txtLimpio = cleanTxt();
+    txtOutput = '';
+    txtOutput = txtLimpio.replace(/e/g, 'enter');
     txtOutput = txtOutput.replace(/i/g, 'imes');
     txtOutput = txtOutput.replace(/a/g, 'ai');
     txtOutput = txtOutput.replace(/o/g, 'ober');    
@@ -18,10 +22,9 @@ function encriptar(){
 }
 
 function desencriptar(){
-    let txtOutput = '';
-    let txtInput = cleanTxt();
-
-    txtOutput = txtInput.replace(/enter/g, 'e'); 
+    txtLimpio = cleanTxt();
+    txtOutput = '';
+    txtOutput = txtLimpio.replace(/enter/g, 'e'); 
     txtOutput = txtOutput.replace(/imes/g, 'i');
     txtOutput = txtOutput.replace(/ai/g, 'a');
     txtOutput = txtOutput.replace(/ober/g, 'o');    
@@ -32,20 +35,42 @@ function desencriptar(){
 }
 
 function cleanTxt(){
-    let txtInput = document.getElementById("txtInput").value;
+    txtInput = document.getElementById("inputTxt").value;
     txtInput = eliminarDiacriticos(txtInput);
     txtInput = txtInput.toLowerCase();
     return txtInput;
 }
 
-function printTxt(text){
-    document.getElementById('txtOutput').value = text;
+// Elimina los diacríticos de un texto (ES6)
+function eliminarDiacriticos(texto) {
+    return texto.normalize('NFD').replace(/[\u0300-\u036f]/g,"");
 }
 
-function copyTxt(params) {
-    navigator.clipboard.writeText(document.getElementById('txtOutput').value).then(function() {
+function printTxt(text){
+    showOutput();
+    document.getElementById('outputTxt').innerHTML = text;
+    
+}
+
+function showOutput(){
+    msn[0].style.display = 'none';
+    outputTxt[0].style.display = 'block';
+    btnCopy[0].style.display = 'block';
+}
+
+function showMsn(){
+    msn[0].style.display = 'block';
+    outputTxt[0].style.display = 'none';
+    btnCopy[0].style.display = 'none';
+}
+
+function copyTxt() {
+    navigator['clipboard'].writeText(document.getElementById('outputTxt').innerHTML).then(function() {
         console.log('Async: Copying to clipboard was successful!');
       }, function(err) {
         console.error('Async: Could not copy text: ', err);
       });
+    showMsn();
+    document.getElementById("inputTxt").value='';
 }
+

@@ -14,14 +14,14 @@
     <main>
         <section class="inputSection">
             <div class="divInputTxt">
-                <textarea class="inputTxt" placeholder="Ingrese el texto aqui"></textarea>
+                <textarea id="inputTxt" placeholder="Ingrese el texto aqui"></textarea>
             </div>
             <div class="divWarning">
                 <p><strong>&#9432</strong> Solo letras minusculas y sin acentos</p>
             </div>
             <div class="divBtns">
-                <input type="button" value="Encriptar" class="btnEncriptar">
-                <input type="button" value="Desencriptar" class="btnDesencriptar">
+                <input type="button" value="Encriptar" class="btnEncriptar" onclick="encriptar();">
+                <input type="button" value="Desencriptar" class="btnDesencriptar" onclick="desencriptar();">
             </div>
         </section>
         <section class="outputSeccion">
@@ -31,10 +31,10 @@
                 <p>Ingresa el texto que desear encriptar o desencriptar.</p>
             </div>
             <div class="divOutputTxt">
-                <p class="outputTxt">Esta es una prueba de la salida que debe de mostrar</p>
+                <p id="outputTxt">Esta es una prueba de la salida que debe de mostrar</p>
             </div>
             <div class="divBtnCopy">
-                <input type="button" value="Copiar" class="btnCopy">
+                <input type="button" value="Copiar" class="btnCopy" onclick="copyTxt();">
             </div>
         </section>
     </main>

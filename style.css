@@ -55,7 +55,7 @@
         padding: 2%;
         margin-left: 10%;
     }
-    .inputTxt{
+    #inputTxt{
         background-color: #f3f5fc;
         border: none;
         width: 100%;
@@ -170,12 +170,13 @@
         padding: 2% 1%;
         display: none;
     }
-    .divOutputTxt p{
+    #OutputTxt{
         width: 98%;
         height: 98%;
         padding: 1px;
         color: #495057;
         font-size: 19px;
+        /* display: block; */
     }
     /* ----------------------------- COPY BTN ----------------------------- */
     .divBtnCopy{
@@ -195,6 +196,7 @@
         background-color: #ffffff;
         color: #0A3871;
         border: 1px solid #0A3871;
+        /* display: block; */
     }
 
 
