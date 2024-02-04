@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="only screen and (min-width: 630px)" href="style.css">
     <link rel="stylesheet" href="reset.css">
 </head>
 <body>
     <header>
-        <img src="img/logo.png" alt="logo">
+        <img src="img/logo.png" alt="logo" class="logo">
     </header>
     <main>
         <section class="inputSection">
             <div class="divInputTxt">
                 <textarea class="inputTxt" placeholder="Ingrese el texto aqui"></textarea>
             </div>
-            <div class="warning">
-                <img src="/img/logo.png" alt="warning">
-                <p>Solo letras minusculas y sin acentos</p>
+            <div class="divWarning">
+                <p><strong>&#9432</strong> Solo letras minusculas y sin acentos</p>
             </div>
             <div class="divBtns">
                 <input type="button" value="Encriptar" class="btnEncriptar">
@@ -26,15 +25,13 @@
             </div>
         </section>
         <section class="outputSeccion">
-            <div class="divImg">
-                <img src="img/Muñeco.png" alt="muneco">
-            </div>
             <div class="divOutputMsn">
+                <img src="img/Muñeco.png" alt="muneco">
                 <h3>Ningun mensaje fue <br> encontrado</h3>
-                <p>Ingresa el texto que desear encriptar o desencriptar</p>
+                <p>Ingresa el texto que desear encriptar o desencriptar.</p>
             </div>
             <div class="divOutputTxt">
-                <p class="outputTxt"></p>
+                <p class="outputTxt">Esta es una prueba de la salida que debe de mostrar</p>
             </div>
             <div class="divBtnCopy">
                 <input type="button" value="Copiar" class="btnCopy">
