@@ -1,6 +1,6 @@
 var msn = document.getElementsByClassName('divOutputMsn');
 var outputTxt = document.getElementsByClassName('divOutputTxt');
-var btnCopy = document.getElementsByClassName('divBtnCopy');
+// var btnCopy = document.getElementsByClassName('divBtnCopy');
 
 var txtOutput = '';
 var txtLimpio = '';
@@ -47,21 +47,22 @@ function eliminarDiacriticos(texto) {
 }
 
 function printTxt(text){
-    showOutput();
-    document.getElementById('outputTxt').innerHTML = text;
-    
+    if (text == '') {
+        alert('Primero ingresa algun texto!');
+    }else{
+        showOutput();
+        document.getElementById('outputTxt').innerHTML = text;
+    }
 }
 
 function showOutput(){
     msn[0].style.display = 'none';
     outputTxt[0].style.display = 'block';
-    btnCopy[0].style.display = 'block';
 }
 
 function showMsn(){
     msn[0].style.display = 'block';
     outputTxt[0].style.display = 'none';
-    btnCopy[0].style.display = 'none';
 }
 
 function copyTxt() {
@@ -70,7 +71,12 @@ function copyTxt() {
       }, function(err) {
         console.error('Async: Could not copy text: ', err);
       });
+    init();
+}
+
+function init(){
     showMsn();
     document.getElementById("inputTxt").value='';
 }
 
+init();
