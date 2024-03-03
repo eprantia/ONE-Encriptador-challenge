@@ -1,6 +1,5 @@
 var msn = document.getElementsByClassName('divOutputMsn');
 var outputTxt = document.getElementsByClassName('divOutputTxt');
-// var btnCopy = document.getElementsByClassName('divBtnCopy');
 
 var txtOutput = '';
 var txtLimpio = '';
